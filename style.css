@@ -1,0 +1,219 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    font-size: 62.5%;
+
+    --ff-roboto: "Roboto", sans-serif
+
+}
+body{
+    font-size: 1.6rem;
+
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+main{
+    display: flex;
+    gap: 19.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+svg {
+    margin-bottom: 2rem;
+}
+
+.hide{
+    display: none;
+}
+#timer{
+    margin-bottom: 6rem;
+}
+#buttons {
+    display: flex;
+    gap: 4.0rem;
+}
+button {
+    background: transparent;
+    border: none;
+}
+
+button svg {
+    cursor: pointer;
+}
+#timerDisplay{
+    display: flex;
+    font-family: var(--ff-roboto);
+    width: 32.1rem;
+    height: 14.8rem;
+    font-size: 12.6rem;
+    line-height: 14.8rem;
+
+    color: #323238;
+
+    margin-bottom: 2rem;
+}
+#card-wrapper{
+    display: grid;
+    gap: 3.2rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "tree" "rain"
+                         "coffe" "fire";
+}
+.treeCard{
+    grid-area: "tree";
+}
+.rainCard{
+    grid-area: "rain";
+}
+.coffeeCard{
+    grid-area: "coffe";
+}
+.fireCard{
+    grid-area: "fire";
+}
+
+.treeCard,
+.rainCard,
+.coffeeCard,
+.fireCard{
+
+    width: 13.8rem;
+    height: 15.2rem;
+
+    text-align: center;
+
+    background: #E1E1E6;
+    border-radius: 2.4rem;
+    display: flex;
+    gap: 3.2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    transition: transform 400ms;
+
+}
+.treeCard:hover,
+.rainCard:hover,
+.coffeeCard:hover,
+.fireCard:hover{
+    transform: scale(1.1);
+}
+
+.rangeLightMode,
+.rangeDarkMode, 
+.rangeLightMode::-webkit-slider-thumb,
+.rangeDarkMode::-webkit-slider-thumb,
+.rangeLightMode::-webkit-slider-runnable-track,
+.rangeDarkMode::-webkit-slider-runnable-track {
+appearance: none;
+}
+
+.rangeLightMode, 
+.rangeDarkMode {
+    cursor: pointer;
+    width: 9rem;
+    position: absolute;
+    bottom: 2rem;
+    right: 2.5rem;
+  }
+  
+  
+  .rangeLightMode::-webkit-slider-runnable-track {
+    height: .4rem;
+    background: hsla(240, 6%, 21%, 1);
+    border-radius: .5rem;
+  }
+  
+  .rangeLightMode::-webkit-slider-thumb {
+    width: 1.6rem;
+    height: 1.6rem;
+    background: hsla(240, 6%, 21%, 1) ;
+    border-radius: 50%;
+    margin-top: -.6rem;
+  }
+
+  .rangeDarkMode::-webkit-slider-runnable-track{
+    height: .4rem;
+    background: #ffffff;
+    border-radius: .5rem;
+  }
+  
+  .rangeDarkMode::-webkit-slider-thumb{
+    
+    width: 1.6rem;
+    height: 1.6rem;
+    background: #ffffff;
+    border-radius: 50%;
+    margin-top: -.6rem;
+    
+  }
+
+.lightMode,
+.darkMode{
+    position: absolute;
+    top: 6rem;
+    right: 6rem;
+
+    cursor: pointer;
+
+    transition: transform 400ms;
+}
+
+.lightMode:hover,
+.darkMode:hover{
+    transform: scale(1.1);
+    transform: rotate(15deg);
+}
+
+.treeCardOn{
+    background-color: #02e702 !important;
+}
+.rainCardOn{
+    background-color: #02799D !important;
+}
+.coffeeCardOn{
+    background-color: rgb(126, 0, 0) !important;
+}
+.fireCardOn{
+    background-color: rgb(255, 0, 0) !important;
+}
+
+.cardDarkMode{
+    background: #29292E;
+}
+
+.cardLightMode {
+    background: #E1E1E6 ;
+}
+
+.darkModeSvgColor{
+    fill: #C4C4CC;
+}
+
+.lightModeSvgColor {
+    fill: #323238;
+}
+
+.svgWhite {
+    fill: white;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.cardColorDarkMode{
+    background-color: #29292E ;
+}
